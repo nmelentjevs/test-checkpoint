@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "builds": [{ "src": "server.js", "use": "@now/node-server" }],
+  "routes": [
+    {
+      "src": "/claims",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/claims/send",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/claims/contact",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/auth/register",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/auth/login",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/auth/me",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/auth/logout",
+      "dest": "/server.js",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/auth/updatedetails",
+      "dest": "/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/auth/updatepassword",
+      "dest": "/server.js",
+      "methods": ["PUT"]
+    },
+    {
+      "src": "/auth/resetpassword/:resettoken",
+      "dest": "/server.js",
+      "methods": ["PUT"]
+    }
+  ]
+}
